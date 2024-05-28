@@ -1,0 +1,472 @@
+// variabel
+$white-color: #ffffff;
+$primary-color: #4b6dbb;
+$secondary-color: #efd063;
+$image-hero: "../image/hero-image.jpg";
+$black-color: #000000;
+$black-color-2: #2b2b2b;
+$hover-color: #2c2d30;
+/* element */
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+li {
+  display: inline;
+}
+
+// class container
+.container {
+  background-color: $white-color;
+  width: 100%;
+  padding: 30px;
+  margin: 0;
+}
+
+.small-description-container {
+  padding: 20px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-content: first baseline;
+  justify-content: center;
+  width: 100%;
+  padding: 100px;
+}
+
+.small-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-container {
+  background-color: $white-color;
+  width: 100%;
+  height: 50%;
+  padding: 30px;
+  margin: 0;
+}
+
+.about-us-pos {
+  position: absolute;
+  top: 790px;
+  left: 50px;
+}
+
+.lorem-ipsum-pos {
+  position: absolute;
+  top: 600px;
+  right: 100px;
+  z-index: 1;
+}
+
+.family-pos {
+  position: absolute;
+  top: 1150px;
+  right: 350px;
+}
+
+.hero {
+  background-image: url($image-hero);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.about-us-img {
+  height: auto;
+  margin: 50px;
+  border-radius: 30px;
+}
+
+.hero-card-container {
+  position: absolute;
+  top: 450px;
+  right: 700px;
+}
+
+.button-container {
+  margin-top: 35px;
+  margin-bottom: 6px;
+  align-items: flex-end;
+}
+
+.information-container {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.info-item-container {
+  display: flex;
+  justify-content: first baseline;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+  height: 28.18px;
+}
+
+.service-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color;
+  color: $white-color;
+  width: 100%;
+  height: 100vh;
+}
+
+/* component section */
+
+.hero-card {
+  display: flex;
+  align-items: self-end;
+  flex-direction: column;
+  background-color: $primary-color;
+  color: $white-color;
+  width: 880px;
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  border-radius: 30px;
+}
+
+.lorem-ipsum-card {
+  background-color: $white-color;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 30px 30px 0 0;
+  padding: 10px 30px;
+  border: $white-color solid;
+}
+
+.about-us-card {
+  background-color: $white-color;
+  color: $black-color;
+  width: 481px;
+  height: 200px;
+  border-radius: 10px;
+  padding: 30px;
+  margin-left: 30px;
+  border: $white-color solid;
+
+  p {
+    color: $black-color;
+  }
+}
+
+.family-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white-color;
+  color: $black-color;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-left: 30px;
+  border: $white-color solid;
+}
+
+.header-nav {
+  background-color: $white-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 50px;
+}
+
+.nav-list {
+  float: right;
+  margin: 0;
+  padding: 20px;
+}
+
+.item-list {
+  float: left;
+  color: $black-color;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 20px;
+
+  &:hover {
+    background-color: $hover-color;
+    color: $white-color;
+  }
+}
+
+.button {
+  background-color: $secondary-color;
+  color: $black-color-2;
+  font-weight: 700;
+  border-radius: 30px 30px 0 0;
+  width: 50px;
+  height: 44px;
+  padding: 16px 16px;
+  text-decoration: none;
+}
+
+.button-ghost {
+  font-weight: 700;
+  border-radius: 30px;
+  width: 50px;
+  height: 44px;
+  padding: 16px 16px;
+  text-decoration: none;
+}
+
+.small-card {
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; // Allow cards to grow to fill the available space
+  flex-basis: calc(33.33% - 20px); // Set the initial width for each card
+  max-width: 300px; // Set a maximum width for each card
+  border-radius: 10px;
+  box-shadow: 0 0 10px $black-color-2;
+  overflow: hidden;
+}
+
+.footer {
+  background-color: $black-color-2;
+  width: 100%;
+  height: 145px;
+  margin: 0;
+  padding: 0;
+}
+
+/* class */
+.information-img {
+  width: 28px;
+  height: 28px;
+}
+
+.icon-img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-left: 15px;
+}
+
+.small-card-img-1,
+.small-card-img-2,
+.small-card-img-3 {
+  background-size: auto;
+  background-position: center;
+  width: 385px;
+  height: 200px;
+  border-radius: 30px 30px 0 0;
+}
+
+.small-card-img-1 {
+  background-image: url("../image/card-cover-1.png");
+}
+
+.small-card-img-2 {
+  background-image: url("../image/card-cover-2.png");
+}
+
+.small-card-img-3 {
+  background-image: url("../image/card-cover-3.png");
+}
+
+.card-title {
+  width: 100%;
+  max-width: 474px;
+  font-size: 50px;
+  line-height: 71px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding: 0;
+}
+
+.small-title {
+  text-align: left;
+  color: $primary-color;
+  width: 100%;
+  max-width: 325px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding: 0;
+}
+
+.card-description {
+  width: 100%;
+  max-width: 459px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  margin-bottom: 20px;
+}
+
+.small-description {
+  text-align: left;
+  width: 100%;
+  max-width: 325px;
+  height: auto;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding: 0;
+}
+
+#about-us {
+  color: $primary-color;
+  margin-left: 100px;
+}
+
+.blue {
+  color: $primary-color;
+}
+
+.white {
+  color: $white-color;
+}
+
+.black {
+  color: $black-color;
+}
+
+.blue-bg {
+  background-color: $primary-color;
+  color: $white-color;
+}
+
+.center-text {
+  text-align: center;
+}
+// Responsif code
+@media screen and (max-width: 800px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  .header-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .hero {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .lorem-ipsum-card,
+  .family-card {
+    max-width: 80%;
+    margin: 0 15px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .small-card-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .container {
+    padding: 50px;
+    flex-wrap: wrap;
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    margin: 0;
+  }
+
+  .small-card {
+    width: 80%;
+    max-width: 300px;
+    flex-basis: calc(50% - 20px);
+    max-width: none;
+  }
+
+  .services-container {
+    text-align: center;
+  }
+
+  .about-us-pos,
+  .lorem-ipsum-pos,
+  .family-pos,
+  .hero-card-container {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .hero-card {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .about-us-card {
+    display: flex;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  #about-us {
+    margin-left: 20px;
+  }
+
+  .about-us-img {
+    max-width: 100%;
+    height: 40vh;
+    width: 100%;
+  }
+}
